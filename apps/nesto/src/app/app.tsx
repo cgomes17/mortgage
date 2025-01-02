@@ -1,11 +1,5 @@
-import NxWelcome from './nx-welcome';
-
 export function App() {
-  return (
-    <div>
-      <NxWelcome title="nesto" />
-    </div>
-  );
+  return <div className="bg-primary">Test</div>;
 }
 
 export default App;

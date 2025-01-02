@@ -1,0 +1,75 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/blocks';
+import { tailwindPreset } from './../../../../tailwind-preset.config';
+
+<Meta title="Colours" />
+
+<div class="container overflow-hidden sb-unstyled rounded-3xl ">
+  <div class="flex flex-col gap-4 px-32 py-16 bg-secondary">
+    <span class="text-6xl text-primary font-bold">Colours</span>
+    <span class="text-xl ">
+      Using standard Nesto colors to ensure a consistent, accessible
+      experience across the supported themes.
+    </span>
+  </div>
+
+  <div class="flex flex-col gap-5 px-32 py-16 bg-surface text-surface-contrast">
+
+    <div>[**Material Color System**](https://m3.material.io/styles/color/roles)</div>
+
+<ColorPalette>
+
+<ColorItem
+  title="Primary"
+  subtitle="Use primary roles for the most prominent components across the UI, such as the FAB, high-emphasis buttons, and active states."
+  colors={{
+    '': tailwindPreset.theme.extend.colors.primary.DEFAULT,
+    Contrast: tailwindPreset.theme.extend.colors.primary.contrast.DEFAULT,
+  }}
+/>
+
+    <ColorItem
+
+title="Secondary"
+subtitle="A secondary color provides more ways to accent and distinguish your product. Having a secondary color is optional, and should be applied sparingly to accent select parts of your UI."
+colors={{
+    '': tailwindPreset.theme.extend.colors.secondary.DEFAULT,
+    Contrast: tailwindPreset.theme.extend.colors.secondary.contrast.DEFAULT,
+  }}
+/>
+
+      <ColorItem
+        title="Surface"
+        subtitle="Use surface roles for more neutral backgrounds, and container colors for components like cards, sheets, and dialogs."
+        colors={tailwindPreset.theme.extend.colors.surface}
+      />
+
+      <ColorItem
+        title="Surface Container"
+        subtitle="Surface container is helpful for creating hierarchy and nested containers in layouts for expanded screens."
+        colors={tailwindPreset.theme.extend.colors['surface-container']}
+      />
+
+    <ColorItem
+
+title="Error"
+subtitle="Use error roles to communicate error states, such as an incorrect password entered into a text field."
+colors={{
+    '': tailwindPreset.theme.extend.colors.error.DEFAULT,
+    Contrast: tailwindPreset.theme.extend.colors.error.contrast.DEFAULT,
+  }}
+/>
+
+    <ColorItem
+
+title="Success"
+subtitle=""
+colors={{
+    '': tailwindPreset.theme.extend.colors.success.DEFAULT,
+    Contrast: tailwindPreset.theme.extend.colors.success.contrast.DEFAULT,
+  }}
+/>
+
+</ColorPalette>
+
+  </div>
+</div>

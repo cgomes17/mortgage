@@ -1,0 +1,25 @@
+:root {
+  --surface: rgb(248, 248, 248);
+  --surface-contrast: rgb(33, 34, 67);
+  --surface-contrast-secondary: rgb(213, 213, 213);
+
+  --surface-container: rgb(255, 255, 255);
+  --surface-container-contrast: rgb(33, 34, 67);
+  --surface-container-contrast-secondary: rgb(213, 213, 213);
+
+  --primary: rgb(249, 66, 58);
+  --primary-contrast: #ffffff;
+
+  --secondary: rgb(255, 204, 0);
+  --secondary-contrast: #ffffff;
+
+  --error: rgb(249, 66, 58);
+  --error-contrast: #ffffff;
+
+  --success: rgb(33, 34, 67);
+  --success-contrast: #ffffff;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
