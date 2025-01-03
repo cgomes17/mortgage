@@ -1,21 +1,19 @@
 # Nesto
 
-### [Mortgage ![Mortgage Status](https://api.netlify.com/api/v1/badges/a69b6359-d13e-41e1-8e56-0ba18960d86e/deploy-status)](https://app.netlify.com/sites/cgomes-mortgage/deploys)
+[![Mortgage Wizard Status](https://api.netlify.com/api/v1/badges/7043ac05-3220-4c16-98ea-e6d1f4f05c5d/deploy-status)](https://app.netlify.com/sites/mortgage-wizard/deploys) [![Netlify Status](https://api.netlify.com/api/v1/badges/4fc07912-4a4f-40c4-83e5-572446520dda/deploy-status)](https://app.netlify.com/sites/mortgage-wizard-storybook/deploys)
 
-### [Storybook ![Storybook Status](https://api.netlify.com/api/v1/badges/4fc07912-4a4f-40c4-83e5-572446520dda/deploy-status)](https://app.netlify.com/sites/mortgage-storybook/deploys)
+## Demos
+
+### [Mortgage Wizard](https://mortgage-wizard.netlify.app/)
+
+### [Mortgage Wizard Storybook](https://mortgage-wizard-storybook.netlify.app/)
 
 ## Run tasks
 
-To run the dev server for your app, use:
+To run the dev server, use:
 
 ```sh
 npm start
-```
-
-To create a production bundle:
-
-```sh
-npx nx build nesto
 ```
 
 To run storybook
