@@ -1,25 +1,15 @@
 # Nesto
 
-[![Mortgage Status](https://api.netlify.com/api/v1/badges/a69b6359-d13e-41e1-8e56-0ba18960d86e/deploy-status)](https://app.netlify.com/sites/cgomes-mortgage/deploys)
+### [Mortgage ![Mortgage Status](https://api.netlify.com/api/v1/badges/a69b6359-d13e-41e1-8e56-0ba18960d86e/deploy-status)](https://app.netlify.com/sites/cgomes-mortgage/deploys)
 
-[![Storybook Status](https://api.netlify.com/api/v1/badges/4fc07912-4a4f-40c4-83e5-572446520dda/deploy-status)](https://app.netlify.com/sites/mortgage-storybook/deploys)
-
-<a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
-
-✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
-
-[Learn more about this workspace setup and its capabilities](https://nx.dev/getting-started/tutorials/react-monorepo-tutorial?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or run `npx nx graph` to visually explore what was created. Now, let's get you up to speed!
-
-## Finish your CI setup
-
-[Click here to finish setting up your workspace!](https://cloud.nx.app/connect/9gUZJwK65N)
+### [Storybook ![Storybook Status](https://api.netlify.com/api/v1/badges/4fc07912-4a4f-40c4-83e5-572446520dda/deploy-status)](https://app.netlify.com/sites/mortgage-storybook/deploys)
 
 ## Run tasks
 
 To run the dev server for your app, use:
 
 ```sh
-npx nx serve nesto
+npm start
 ```
 
 To create a production bundle:
@@ -28,15 +18,11 @@ To create a production bundle:
 npx nx build nesto
 ```
 
-To see all available targets to run for a project, run:
+To run storybook
 
 ```sh
-npx nx show project nesto
+npm run storybook
 ```
-
-These targets are either [inferred automatically](https://nx.dev/concepts/inferred-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects) or defined in the `project.json` or `package.json` files.
-
-[More about running tasks in the docs &raquo;](https://nx.dev/features/run-tasks?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
 # nesto Front-End Coding Challenge
 

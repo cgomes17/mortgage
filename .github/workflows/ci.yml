@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   prepare:
-    name: Prepare & Build
+    name: Prepare & Build & Deploy
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -65,12 +65,15 @@ jobs:
           netlify deploy \
             --dir dist/apps/nesto \
             --site ${{ secrets.NETLIFY_SITE_ID }} \
-            --auth ${{ secrets.NETLIFY_API_TOKEN }}
+            --auth ${{ secrets.NETLIFY_API_TOKEN }} \
+            --message "version: ${{env.ARTIFACT_VERSION}}" \
+            --prod
       - name: Deploy Storybook
         id: netlify_deploy_storybook
         run: |
           netlify deploy \
             --dir dist/storybook/storybook-host \
             --site ${{ secrets.NETLIFY_STORYBOOK_SITE_ID }} \
-            --auth ${{ secrets.NETLIFY_API_TOKEN }}
+            --auth ${{ secrets.NETLIFY_API_TOKEN }} \
+            --message "version: ${{env.ARTIFACT_VERSION}}" \
             --prod
