@@ -62,7 +62,7 @@ jobs:
       - name: Deploy Site
         id: netlify_deploy_site
         run: |
-          netlify deploy \
+          npx netlify deploy \
             --dir dist/apps/nesto \
             --site ${{ secrets.NETLIFY_SITE_ID }} \
             --auth ${{ secrets.NETLIFY_API_TOKEN }} \
@@ -71,7 +71,7 @@ jobs:
       - name: Deploy Storybook
         id: netlify_deploy_storybook
         run: |
-          netlify deploy \
+          npx netlify deploy \
             --dir dist/storybook/storybook-host \
             --site ${{ secrets.NETLIFY_STORYBOOK_SITE_ID }} \
             --auth ${{ secrets.NETLIFY_API_TOKEN }} \
