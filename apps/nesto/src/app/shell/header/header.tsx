@@ -17,13 +17,16 @@ export function ShellHeader() {
           <Link to="/mortgage-rates">
             <ShellHeaderLinkText label="Mortgage Rates" />
           </Link>
+          <Link to="/contact">
+            <ShellHeaderLinkText label="Contact Us" />
+          </Link>
         </div>
       </div>
       <div className="flex flex-row items-center gap-8">
         <Link to="/login">
           <ShellHeaderLinkText label="Login" />
         </Link>
-        <Link to="/signup">
+        <Link to="/applications">
           <Button>Sign Up</Button>
         </Link>
       </div>

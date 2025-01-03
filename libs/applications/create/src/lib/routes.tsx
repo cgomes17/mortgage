@@ -1,13 +1,6 @@
-import {
-  createRoute,
-  lazyRouteComponent,
-  RootRoute,
-  Route,
-} from '@tanstack/react-router';
+import { createLazyRoute } from '@tanstack/react-router';
+import Main from './main/main';
 
-export const getApplicationsCreateRoute = (parentRoute: RootRoute | Route) =>
-  createRoute({
-    path: '/applications/create',
-    getParentRoute: () => parentRoute,
-    component: lazyRouteComponent(() => import('./main/main')),
-  });
+export const applicationsCreate = createLazyRoute('/create')({
+  component: Main,
+});

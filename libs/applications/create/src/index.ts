@@ -1,1 +1,1 @@
-export { getApplicationsCreateRoute } from './lib/routes';
+export { applicationsCreate } from './lib/routes';

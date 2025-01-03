@@ -5,8 +5,8 @@ import {
   redirect,
 } from '@tanstack/react-router';
 import { App } from './app/app';
-import { getApplicationsCreateRoute } from '@nesto/applications/create';
 import Main from './app/main/main';
+import { applicationsRoute, getApplicationsRoute } from './applications-routes';
 
 export const rootRoute = createRootRoute({
   component: App,
@@ -40,17 +40,12 @@ const routeTree = rootRoute.addChildren([
       });
     },
   }),
-  getApplicationsCreateRoute(rootRoute),
-  createRoute({
-    path: '/products',
-    getParentRoute: () => rootRoute,
-    component: () => <div>Apply</div>,
-  }),
   createRoute({
     path: '/contact',
     getParentRoute: () => rootRoute,
     component: () => <div>Contact</div>,
   }),
+  getApplicationsRoute(rootRoute),
 ]);
 
 export const router = createRouter({ routeTree });
