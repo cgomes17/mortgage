@@ -57,8 +57,6 @@ jobs:
       #   with:
       #     name: code-coverage-report
       #     path: output/test/code-coverage.html
-      - name: Install Netlify
-        run: npm install netlify-cli -g
       - name: Deploy Site
         id: netlify_deploy_site
         run: |
@@ -68,6 +66,7 @@ jobs:
             --auth ${{ secrets.NETLIFY_API_TOKEN }} \
             --message "version: ${{env.ARTIFACT_VERSION}}" \
             --prod
+            --build false
       - name: Deploy Storybook
         id: netlify_deploy_storybook
         run: |
@@ -77,3 +76,4 @@ jobs:
             --auth ${{ secrets.NETLIFY_API_TOKEN }} \
             --message "version: ${{env.ARTIFACT_VERSION}}" \
             --prod
+            --build false
