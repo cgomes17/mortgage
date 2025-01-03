@@ -27,24 +27,12 @@ jobs:
         run: npx nx-cloud start-ci-run --distribute-on="3 linux-medium-js" --stop-agents-after="build,build-storybook"
       - name: Install Packages
         run: npm run ci:install
-
-  checks:
-    name: Checks
-    needs: prepare
-    runs-on: ubuntu-latest
-    steps:
       - name: Format
         run: npm run ci:checks:format
       - name: Lint
         run: npm run ci:checks:lint
       - name: Test
         run: npm run ci:checks:test
-
-  build:
-    name: Build
-    needs: checks
-    runs-on: ubuntu-latest
-    steps:
       - name: Build
         run: npm run ci:build
       - name: Build Storybook
