@@ -7,7 +7,13 @@
     "storybook": "nx storybook storybook-host",
     "prepare": "husky",
     "dev:husky:commit": "nx format && nx affected:lint",
-    "dev:husky:push": "nx format && nx affected:lint && nx affected:test"
+    "dev:husky:push": "nx format && nx affected:lint && nx affected:test",
+    "ci:checks:format": "npx nx format:check",
+    "ci:checks:lint": "npx nx affected:lint",
+    "ci:checks:test": "npx nx affected:test -c ci",
+    "ci:install": "npm ci --loglevel=warn --no-audit --progress=false --ignore-scripts --legacy-peer-deps",
+    "ci:build": "npx nx affected:build --configuration=production",
+    "ci:build-storybook": "npx nx affected --target build-storybook"
   },
   "private": true,
   "dependencies": {
@@ -42,6 +48,7 @@
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
     "@tanstack/eslint-plugin-query": "^5.62.9",
+    "@tanstack/eslint-plugin-router": "^1.92.7",
     "@tanstack/router-devtools": "^1.94.0",
     "@tanstack/router-plugin": "^1.94.0",
     "@testing-library/react": "15.0.6",

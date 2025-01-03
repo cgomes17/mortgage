@@ -1,11 +1,11 @@
 const nx = require('@nx/eslint-plugin');
-const pluginQuery = require('@tanstack/eslint-plugin-query');
+const pluginRouter = require('@tanstack/eslint-plugin-router');
 
 module.exports = [
   ...nx.configs['flat/base'],
   ...nx.configs['flat/typescript'],
   ...nx.configs['flat/javascript'],
-  ...pluginQuery.configs['flat/recommended'],
+  ...pluginRouter.configs['flat/recommended'],
   {
     ignores: ['**/dist'],
   },
