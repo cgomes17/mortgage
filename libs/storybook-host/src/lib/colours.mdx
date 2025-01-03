@@ -21,10 +21,7 @@ import { tailwindPreset } from './../../../../tailwind-preset.config';
 <ColorItem
   title="Primary"
   subtitle="Use primary roles for the most prominent components across the UI, such as the FAB, high-emphasis buttons, and active states."
-  colors={{
-    '': tailwindPreset.theme.extend.colors.primary.DEFAULT,
-    Contrast: tailwindPreset.theme.extend.colors.primary.contrast.DEFAULT,
-  }}
+  colors={tailwindPreset.theme.extend.colors.primary}
 />
 
     <ColorItem
@@ -44,6 +41,12 @@ colors={tailwindPreset.theme.extend.colors.secondary}
         title="Surface Container"
         subtitle="Surface container is helpful for creating hierarchy and nested containers in layouts for expanded screens."
         colors={tailwindPreset.theme.extend.colors['surface-container']}
+      />
+
+     <ColorItem
+        title="Surface Container Secondary"
+        subtitle="Surface container is helpful for creating hierarchy and nested containers in layouts for expanded screens."
+        colors={tailwindPreset.theme.extend.colors['surface-container-secondary']}
       />
 
     <ColorItem

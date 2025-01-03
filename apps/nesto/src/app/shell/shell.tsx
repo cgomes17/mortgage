@@ -1,16 +1,17 @@
-import { Link } from '@tanstack/react-router';
+import { ShellFooter } from './footer/footer';
+import { ShellHeader } from './header/header';
 
 export function Shell({ children }: { children: React.ReactNode }) {
   return (
-    <>
-      <h1>Welcome to Shell!</h1>
-      <div className="flex-1 pt-12">{children}</div>
-      <div className="flex flex-row gap-4">
-        <Link to="/">Home</Link>
-        <Link to="/contact">Contact</Link>
-        <Link to="/apply">Apply</Link>
+    <div className="flex flex-col w-full h-full justify-self-center">
+      <div className="pt-12">
+        <ShellHeader />
       </div>
-    </>
+      <div className="flex-1 pt-12">{children}</div>
+      <div className="justify-end">
+        <ShellFooter />
+      </div>
+    </div>
   );
 }
 

@@ -20,7 +20,8 @@
     "@tanstack/react-router": "^1.94.0",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-hook-form": "^7.54.2"
+    "react-hook-form": "^7.54.2",
+    "tailwind-variants": "^0.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.14.5",

@@ -11,6 +11,7 @@ module.exports = {
       '{src,pages,components,app}/**/!(*.spec).{ts,tsx,html,mdx}'
     ),
     ...createGlobPatternsForDependencies(__dirname),
+    'libs/shared/{src,pages,components,app}/**/!(*.spec).{ts,tsx,html,mdx}',
   ],
   presets: [tailwindPreset],
   theme: {

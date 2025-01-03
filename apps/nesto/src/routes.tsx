@@ -16,11 +16,34 @@ const routeTree = rootRoute.addChildren([
     getParentRoute: () => rootRoute,
     loader: () => {
       redirect({
-        to: '/apply',
+        to: '/offers',
         throw: true,
       });
     },
   }),
+  createRoute({
+    path: 'mortgage-rates',
+    getParentRoute: () => rootRoute,
+    loader: () => {
+      redirect({
+        href: 'https://www.nesto.ca/mortgage-rates/',
+        throw: true,
+        replace: true,
+      });
+    },
+  }),
+  createRoute({
+    path: 'about-us',
+    getParentRoute: () => rootRoute,
+    loader: () => {
+      redirect({
+        href: '  https://www.nesto.ca/about-us/',
+        throw: true,
+        replace: true,
+      });
+    },
+  }),
+
   createRoute({
     path: '/apply',
     getParentRoute: () => rootRoute,
