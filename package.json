@@ -12,8 +12,8 @@
     "ci:checks:lint": "npx nx affected:lint",
     "ci:checks:test": "npx nx affected:test -c ci",
     "ci:install": "npm ci --loglevel=warn --no-audit --progress=false --ignore-scripts --legacy-peer-deps",
-    "ci:build": "npx nx affected:build --configuration=production",
-    "ci:build-storybook": "npx nx affected --target build-storybook"
+    "ci:build": "npx nx run-many -all -t build --configuration=production",
+    "ci:build-storybook": "npx nx build-storybook storybook-host"
   },
   "private": true,
   "dependencies": {

@@ -1,5 +1,9 @@
 # Nesto
 
+[![Mortgage Status](https://api.netlify.com/api/v1/badges/a69b6359-d13e-41e1-8e56-0ba18960d86e/deploy-status)](https://app.netlify.com/sites/cgomes-mortgage/deploys)
+
+[![Storybook Status](https://api.netlify.com/api/v1/badges/4fc07912-4a4f-40c4-83e5-572446520dda/deploy-status)](https://app.netlify.com/sites/mortgage-storybook/deploys)
+
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
 ✨ Your new, shiny [Nx workspace](https://nx.dev) is almost ready ✨.
