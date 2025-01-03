@@ -14,8 +14,7 @@ module.exports = {
   ],
   presets: [tailwindPreset],
   theme: {
-    extend: {
-    },
+    extend: {},
   },
   plugins: [],
 };

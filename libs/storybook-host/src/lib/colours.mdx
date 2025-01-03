@@ -31,10 +31,7 @@ import { tailwindPreset } from './../../../../tailwind-preset.config';
 
 title="Secondary"
 subtitle="A secondary color provides more ways to accent and distinguish your product. Having a secondary color is optional, and should be applied sparingly to accent select parts of your UI."
-colors={{
-    '': tailwindPreset.theme.extend.colors.secondary.DEFAULT,
-    Contrast: tailwindPreset.theme.extend.colors.secondary.contrast.DEFAULT,
-  }}
+colors={tailwindPreset.theme.extend.colors.secondary}
 />
 
       <ColorItem
@@ -53,20 +50,14 @@ colors={{
 
 title="Error"
 subtitle="Use error roles to communicate error states, such as an incorrect password entered into a text field."
-colors={{
-    '': tailwindPreset.theme.extend.colors.error.DEFAULT,
-    Contrast: tailwindPreset.theme.extend.colors.error.contrast.DEFAULT,
-  }}
+colors={tailwindPreset.theme.extend.colors.error}
 />
 
     <ColorItem
 
 title="Success"
 subtitle=""
-colors={{
-    '': tailwindPreset.theme.extend.colors.success.DEFAULT,
-    Contrast: tailwindPreset.theme.extend.colors.success.contrast.DEFAULT,
-  }}
+colors={tailwindPreset.theme.extend.colors.success}
 />
 
 </ColorPalette>

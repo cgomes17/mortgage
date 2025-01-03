@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import App from './app';
+import Shell from './shell';
 
-describe('App', () => {
+describe('Shell', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<App />);
+    const { baseElement } = render(<Shell />);
     expect(baseElement).toBeTruthy();
   });
 });

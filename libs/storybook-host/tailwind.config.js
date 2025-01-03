@@ -1,9 +1,7 @@
-
 // eslint-disable-next-line @nx/enforce-module-boundaries
 import { tailwindPreset } from '../../tailwind-preset.config';
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('path');
-
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -16,8 +14,7 @@ module.exports = {
   ],
   presets: [tailwindPreset],
   theme: {
-    extend: {
-    },
+    extend: {},
   },
   plugins: [],
 };

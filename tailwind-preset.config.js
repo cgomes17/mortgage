@@ -11,27 +11,19 @@ const colours = {
   },
   primary: {
     DEFAULT: 'var(--primary)',
-    contrast: {
-      DEFAULT: 'var(--primary-contrast)',
-    },
+    contrast: 'var(--primary-contrast)',
   },
   secondary: {
     DEFAULT: 'var(--secondary)',
-    contrast: {
-      DEFAULT: 'var(--secondary-contrast)',
-    },
+    contrast: 'var(--secondary-contrast)',
   },
   error: {
     DEFAULT: 'var(--error)',
-    contrast: {
-      DEFAULT: 'var(--error-contrast)',
-    },
+    contrast: 'var(--error-contrast)',
   },
   success: {
     DEFAULT: 'var(--success)',
-    contrast: {
-      DEFAULT: 'var(--success-contrast)',
-    },
+    contrast: 'var(--success-contrast)',
   },
 };
 
@@ -45,5 +37,5 @@ export const tailwindPreset = {
       colors: colours,
     },
   },
-  darkMode: 'class'
+  darkMode: 'class',
 };
