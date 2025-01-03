@@ -11,6 +11,7 @@
       "cache": true
     },
     "build-storybook": {
+      "cache": true,
       "executor": "@nx/storybook:build",
       "outputs": ["{options.outputDir}"],
       "options": {

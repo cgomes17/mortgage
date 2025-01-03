@@ -6,6 +6,9 @@ on:
     branches:
       - master
 
+env:
+  ARTIFACT_VERSION: ${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }}
+
 permissions:
   actions: read
   contents: read
@@ -40,13 +43,13 @@ jobs:
       - name: Archive Site Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: Site
+          name: site_${{ env.ARTIFACT_VERSION }}
           path: |
             dist/apps/nesto
       - name: Archive Storybook Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: Site
+          name: storybook_${{ env.ARTIFACT_VERSION }}
           path: |
             dist/storybook/storybook-host
       # - name: Archive Code Coverage Results
