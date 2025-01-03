@@ -57,3 +57,20 @@ jobs:
       #   with:
       #     name: code-coverage-report
       #     path: output/test/code-coverage.html
+      - name: Install Netlify
+        run: npm install netlify-cli -g
+      - name: Deploy Site
+        id: netlify_deploy_site
+        run: |
+          netlify deploy \
+            --dir dist/apps/nesto \
+            --site ${{ secrets.NETLIFY_SITE_ID }} \
+            --auth ${{ secrets.NETLIFY_API_TOKEN }}
+      - name: Deploy Storybook
+        id: netlify_deploy_storybook
+        run: |
+          netlify deploy \
+            --dir dist/storybook/storybook-host \
+            --site ${{ secrets.NETLIFY_STORYBOOK_SITE_ID }} \
+            --auth ${{ secrets.NETLIFY_API_TOKEN }}
+            --prod
