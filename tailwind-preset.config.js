@@ -2,27 +2,29 @@ const colours = {
   surface: {
     DEFAULT: 'var(--surface)',
     contrast: 'var(--surface-contrast)',
-    'contrast-secondary': 'var(--surface-contrast-secondary)',
+    'contrast-variant': 'var(--surface-contrast-variant)',
     'contrast-hover': 'var(--surface-contrast-hover)',
   },
   'surface-container': {
     DEFAULT: 'var(--surface-container)',
     contrast: 'var(--surface-container-contrast)',
-    'contrast-secondary': 'var(--surface-container-contrast-secondary)',
+    'contrast-variant': 'var(--surface-container-contrast-variant)',
   },
   'surface-container-secondary': {
     DEFAULT: 'var(--surface-container-secondary)',
     contrast: 'var(--surface-container-secondary-contrast)',
-    'contrast-secondary':
-      'var(--surface-container-secondary-contrast-secondary)',
+    'contrast-variant':
+      'var(--surface-container-secondary-contrast-variant)',
   },
   primary: {
     DEFAULT: 'var(--primary)',
     contrast: 'var(--primary-contrast)',
+    'contrast-variant': 'var(--primary-contrast-variant)',
   },
   secondary: {
     DEFAULT: 'var(--secondary)',
     contrast: 'var(--secondary-contrast)',
+    'contrast-variant': 'var(--secondary-contrast-variant)',
   },
   error: {
     DEFAULT: 'var(--error)',

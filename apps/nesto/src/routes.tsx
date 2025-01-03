@@ -4,7 +4,9 @@ import {
   createRouter,
   redirect,
 } from '@tanstack/react-router';
-import App from './app/app';
+import { App } from './app/app';
+import { getApplicationsCreateRoute } from '@nesto/applications/create';
+import Main from './app/main/main';
 
 export const rootRoute = createRootRoute({
   component: App,
@@ -14,12 +16,7 @@ const routeTree = rootRoute.addChildren([
   createRoute({
     path: '/',
     getParentRoute: () => rootRoute,
-    loader: () => {
-      redirect({
-        to: '/offers',
-        throw: true,
-      });
-    },
+    component: Main,
   }),
   createRoute({
     path: 'mortgage-rates',
@@ -43,9 +40,9 @@ const routeTree = rootRoute.addChildren([
       });
     },
   }),
-
+  getApplicationsCreateRoute(rootRoute),
   createRoute({
-    path: '/apply',
+    path: '/products',
     getParentRoute: () => rootRoute,
     component: () => <div>Apply</div>,
   }),

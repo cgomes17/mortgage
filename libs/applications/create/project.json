@@ -1,0 +1,9 @@
+{
+  "name": "applications-create",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/applications/create/src",
+  "projectType": "library",
+  "tags": [],
+  "// targets": "to see all targets run: nx show project create --web",
+  "targets": {}
+}
