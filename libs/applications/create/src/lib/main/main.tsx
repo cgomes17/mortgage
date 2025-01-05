@@ -1,13 +1,12 @@
 import {
-  useAllProducts,
   useBestProducts,
   useFixedProducts,
   useVariableProducts,
 } from '@nesto/applications/data';
-import { ProductCard } from '../product-card/product-card';
-import { Product } from '@nesto/applications/data';
 import { Button } from '@nesto/shared';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
+import { ProductCard } from '../product-card/product-card';
 import ProductTable from '../product-table/product-table';
 
 export function Main() {
@@ -16,11 +15,20 @@ export function Main() {
   const { data: variableProducts } = useVariableProducts();
   const { data: fixedProducts } = useFixedProducts();
 
+  const createApplication = (productId: number) => {
+    toast.success('Application created ' + productId);
+  };
+
   return (
     <div className="flex flex-col items-center justify-center gap-8">
-      <div className="flex flex-row flex-wrap gap-6">
+      <div className="flex flex-row flex-wrap justify-center gap-6">
         {bestProducts?.map((product) => (
-          <ProductCard isBest={true} key={product.id} product={product} />
+          <ProductCard
+            onSelectClick={(productId: number) => createApplication(productId)}
+            isBest={true}
+            key={product.id}
+            product={product}
+          />
         ))}
       </div>
       {(fixedProducts?.length || variableProducts?.length) && (
@@ -30,9 +38,17 @@ export function Main() {
       )}
 
       {showAll && (
-        <div className="flex flex-row flex-wrap gap-8">
-          <ProductTable type={'FIXED'} products={fixedProducts} />
-          <ProductTable type={'VARIABLE'} products={variableProducts} />
+        <div className="flex flex-row flex-wrap justify-center gap-8">
+          <ProductTable
+            onSelectClick={(productId: number) => createApplication(productId)}
+            type={'FIXED'}
+            products={fixedProducts}
+          />
+          <ProductTable
+            onSelectClick={(productId: number) => createApplication(productId)}
+            type={'VARIABLE'}
+            products={variableProducts}
+          />
         </div>
       )}
     </div>

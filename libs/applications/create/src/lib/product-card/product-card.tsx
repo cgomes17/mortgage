@@ -1,13 +1,13 @@
-// eslint-disable-next-line @nx/enforce-module-boundaries
-import { Product } from 'libs/applications/data/src/lib/models/product';
+import { Product } from '@nesto/applications/data';
 import { Button, Card } from '@nesto/shared';
-import { Link } from '@tanstack/react-router';
 
 export function ProductCard({
   product,
   isBest = false,
+  onSelectClick,
 }: {
   product: Product;
+  onSelectClick: (id: number) => void;
   isBest?: boolean;
 }) {
   return (
@@ -25,9 +25,9 @@ export function ProductCard({
         </div>
         <span className="text-lg font-bold">{product.lenderName}</span>
 
-        <Link to={`/applications/${product.id}`}>
-          <Button size="lg">Get This Rate</Button>
-        </Link>
+        <Button size="lg" onClick={() => onSelectClick(product.id)}>
+          Get This Rate
+        </Button>
       </div>
     </Card>
   );

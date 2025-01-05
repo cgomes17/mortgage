@@ -1,6 +1,6 @@
 import { ReactComponent as FBLogo } from './../../../../assets/icon-facebook.svg';
-import { ReactComponent as TwitterLogo } from './../../../../assets/icon-twitter.svg';
 import { ReactComponent as InstagramLogo } from './../../../../assets/icon-instagram.svg';
+import { ReactComponent as TwitterLogo } from './../../../../assets/icon-twitter.svg';
 
 export interface FooterSocialLinkListItem {
   label: string;
@@ -29,7 +29,7 @@ export function SocialLinks() {
           rel="noreferrer"
           title={`${item.label} Logo`}
         >
-          <item.logo className="color-override fill-secondary-contrast hover:fill-secondary" />
+          <item.logo className="color-override fill-surface-container-secondary-contrast hover:fill-secondary" />
         </a>
       ))}
     </div>
