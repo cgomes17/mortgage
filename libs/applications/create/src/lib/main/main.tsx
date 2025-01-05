@@ -1,9 +1,11 @@
 import {
   useBestProducts,
+  useCreateApplication,
   useFixedProducts,
   useVariableProducts,
 } from '@nesto/applications/data';
 import { Button } from '@nesto/shared';
+import { useNavigate } from '@tanstack/react-router';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
 import { ProductCard } from '../product-card/product-card';
@@ -14,9 +16,20 @@ export function Main() {
   const { data: bestProducts } = useBestProducts();
   const { data: variableProducts } = useVariableProducts();
   const { data: fixedProducts } = useFixedProducts();
+  const navigate = useNavigate();
+
+  const { mutate } = useCreateApplication((data) => {
+    toast.success('Application created');
+    navigate({
+      to: '/applications/$applicationId',
+      params: { $applicationId: data.id },
+    });
+  });
 
   const createApplication = (productId: number) => {
-    toast.success('Application created ' + productId);
+    mutate({
+      productId: productId,
+    });
   };
 
   return (

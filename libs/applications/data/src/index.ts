@@ -4,6 +4,7 @@ export * from './lib/models/product';
 export {
   useAllProducts,
   useBestProducts,
+  useCreateApplication,
   useFixedProducts,
   useVariableProducts,
 } from './lib/queries';

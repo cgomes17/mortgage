@@ -1,4 +1,4 @@
-import { createRoute, redirect, RootRoute } from '@tanstack/react-router';
+import { createRoute, RootRoute } from '@tanstack/react-router';
 import { RootContext } from './context';
 
 export const getApplicationsRoute = (
@@ -17,14 +17,11 @@ export const getApplicationsRoute = (
     createRoute({
       getParentRoute: () => applicationsRoute,
       path: '/',
-      loader: () => {
-        redirect({
-          to: 'create',
-          throw: true,
-          replace: true,
-        });
-      },
-    }),
+    }).lazy(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (): Promise<any> =>
+        import('@nesto/applications/list').then((d) => d.applicationsList)
+    ),
     createRoute({
       getParentRoute: () => applicationsRoute,
       path: '/create',
@@ -32,6 +29,14 @@ export const getApplicationsRoute = (
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       (): Promise<any> =>
         import('@nesto/applications/create').then((d) => d.applicationsCreate)
+    ),
+    createRoute({
+      getParentRoute: () => applicationsRoute,
+      path: '/$applicationId',
+    }).lazy(
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (): Promise<any> =>
+        import('@nesto/applications/details').then((d) => d.applicationsDetails)
     ),
   ]);
 

@@ -9,7 +9,7 @@ export function Main() {
           <h1 className="text-5xl font-bold max-w-[700px]">
             Find the Best Mortgage Rates in Canada
           </h1>
-          <Link to="/applications">
+          <Link to="/applications/create">
             <Button size="lg">Get Started</Button>
           </Link>
         </div>

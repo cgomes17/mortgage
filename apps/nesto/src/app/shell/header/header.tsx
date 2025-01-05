@@ -28,7 +28,7 @@ export function ShellHeader() {
             <Link to="/login">
               <ShellHeaderLinkText label="Login" />
             </Link>
-            <Link to="/applications">
+            <Link to="/applications/create">
               <Button>Sign Up</Button>
             </Link>
           </div>

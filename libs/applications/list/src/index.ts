@@ -1,1 +1,1 @@
-export * from './lib/list';
+export { applicationsList } from './lib/routes';

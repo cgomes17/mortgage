@@ -1,1 +1,1 @@
-export * from './lib/details';
+export { applicationsDetails } from './lib/routes';

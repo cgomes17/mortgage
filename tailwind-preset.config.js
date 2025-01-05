@@ -41,7 +41,7 @@ export const tailwindPreset = {
       padding: {
         lg: '4rem',
         md: '3rem',
-        sm: '2rem'
+        sm: '2rem',
       },
     },
     fontFamily: {

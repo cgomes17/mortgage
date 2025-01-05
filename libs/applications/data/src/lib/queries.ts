@@ -1,5 +1,7 @@
 import { request } from '@nesto/shared';
-import { useQuery } from '@tanstack/react-query';
+import { DefaultError, useMutation, useQuery } from '@tanstack/react-query';
+import { Application } from './models/application';
+import { CreateApplication } from './models/commands';
 import { Product } from './models/product';
 
 const getByType = (products: Product[], type: Product['type']): Product[] => {
@@ -19,17 +21,26 @@ const getLowestBestRatesByType = (products: Product[]): Product[] => {
   return [...result].map(([, product]) => product);
 };
 
-export const loadProducts = async (): Promise<Product[]> => {
-  return await request<Product[]>({ url: '/products', method: 'GET' });
-};
-
 const useProducts = <T = Product[]>(select: (data: Product[]) => T) => {
   return useQuery({
     queryKey: ['products'],
-    queryFn: loadProducts,
+    queryFn: () => request<Product[]>({ url: '/products', method: 'GET' }),
     select,
   });
 };
+
+export const useCreateApplication = (onSuccess: (data: Application) => void) =>
+  useMutation<Application, DefaultError, CreateApplication>({
+    mutationFn: (command: CreateApplication) =>
+      request<Application>({
+        url: '/applications',
+        method: 'POST',
+        data: command,
+      }),
+    onSuccess: (data) => {
+      onSuccess(data);
+    },
+  });
 
 export const useAllProducts = () => useProducts((data) => data);
 export const useBestProducts = () =>
