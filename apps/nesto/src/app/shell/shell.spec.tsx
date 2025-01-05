@@ -7,6 +7,31 @@ jest.mock('@tanstack/react-router', () => {
   };
 });
 
+jest.mock('@tanstack/react-query', () => {
+  return {
+    useIsFetching: jest.fn(),
+  };
+});
+
+jest.mock('@nesto/shared', () => {
+  return {
+    Spinner: jest.fn(),
+    Splash: jest.fn(),
+  };
+});
+
+jest.mock('./footer/footer', () => {
+  return {
+    ShellFooter: jest.fn(),
+  };
+});
+
+jest.mock('./header/header', () => {
+  return {
+    ShellHeader: jest.fn(),
+  };
+});
+
 describe('Shell', () => {
   it('should render successfully', () => {
     const { baseElement } = render(<Shell>Content</Shell>);

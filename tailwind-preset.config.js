@@ -13,8 +13,7 @@ const colours = {
   'surface-container-secondary': {
     DEFAULT: 'var(--surface-container-secondary)',
     contrast: 'var(--surface-container-secondary-contrast)',
-    'contrast-variant':
-      'var(--surface-container-secondary-contrast-variant)',
+    'contrast-variant': 'var(--surface-container-secondary-contrast-variant)',
   },
   primary: {
     DEFAULT: 'var(--primary)',
