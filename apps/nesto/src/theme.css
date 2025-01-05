@@ -19,8 +19,8 @@
   --secondary-contrast-variant: rgb(33, 34, 67);
 
   --secondary: rgb(255, 204, 0);
-  --secondary-contrast: #ffffff;
-  --secondary-contrast-variant: rgb(33, 34, 67);
+  --secondary-contrast: rgb(33, 34, 67);
+  --secondary-contrast-variant: #ffffff;
 
   --error: rgb(249, 66, 58);
   --error-contrast: #ffffff;

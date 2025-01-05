@@ -1,18 +1,19 @@
+import { QueryClient } from '@tanstack/react-query';
 import {
-  createRootRoute,
+  createRootRouteWithContext,
   createRoute,
-  createRouter,
   redirect,
 } from '@tanstack/react-router';
-import { App } from './app/app';
-import Main from './app/main/main';
-import { applicationsRoute, getApplicationsRoute } from './applications-routes';
+import { App } from '../app';
+import Main from '../main/main';
+import { getApplicationsRoute } from './applications-routes';
+import { RootContext } from './context';
 
-export const rootRoute = createRootRoute({
+export const rootRoute = createRootRouteWithContext<RootContext>()({
   component: App,
 });
 
-const routeTree = rootRoute.addChildren([
+export const routeTree = rootRoute.addChildren([
   createRoute({
     path: '/',
     getParentRoute: () => rootRoute,
@@ -47,5 +48,3 @@ const routeTree = rootRoute.addChildren([
   }),
   getApplicationsRoute(rootRoute),
 ]);
-
-export const router = createRouter({ routeTree });

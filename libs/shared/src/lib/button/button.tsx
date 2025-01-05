@@ -26,13 +26,18 @@ export function Button({
   colour,
   size,
   children,
+  ...buttonProps
 }: {
   colour?: BasicColours;
   size?: BasicSizes;
   children: React.ReactNode;
-}) {
+} & React.ButtonHTMLAttributes<HTMLButtonElement>) {
   return (
-    <button type="button" className={button({ size: size, color: colour })}>
+    <button
+      type="button"
+      className={button({ size: size, color: colour })}
+      {...buttonProps}
+    >
       {children}
     </button>
   );

@@ -5,7 +5,7 @@ import { Button } from '@nesto/shared';
 
 export function ShellHeader() {
   return (
-    <div className="container flex flex-row items-center justify-between gap-2 mx-auto">
+    <div className="container bg-surface-container flex flex-row items-center justify-between gap-2 mx-auto py-6">
       <div className="flex flex-row items-center gap-12">
         <Link to="/">
           <NestoLogo title="Nesto Logo" className="w-[121px] h-[53px]" />
