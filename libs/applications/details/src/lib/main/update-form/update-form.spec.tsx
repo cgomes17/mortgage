@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
-import React from 'react';
-import { Main } from './main';
 
-describe('Main', () => {
+import UpdateForm from './update-form';
+
+describe('UpdateForm', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Main />);
+    const { baseElement } = render(<UpdateForm />);
     expect(baseElement).toBeTruthy();
   });
 });

@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
-import React from 'react';
-import { Main } from './main';
 
-describe('Main', () => {
+import Label from './label';
+
+describe('Label', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Main />);
+    const { baseElement } = render(<Label />);
     expect(baseElement).toBeTruthy();
   });
 });

@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
-import React from 'react';
-import { Main } from './main';
 
-describe('Main', () => {
+import ControlError from './control-error';
+
+describe('ControlError', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Main />);
+    const { baseElement } = render(<ControlError />);
     expect(baseElement).toBeTruthy();
   });
 });

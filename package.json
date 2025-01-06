@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "nx serve nesto",
-    "storybook": "nx storybook storybook-host",
+    "start": "npx nx serve nesto",
+    "storybook": "npx nx storybook storybook-host",
+    "tests": "npx nx run-many -all -t test",
     "prepare": "husky",
     "dev:husky:commit": "nx format && nx affected:lint",
     "dev:husky:push": "nx format && nx affected:lint && nx affected:test",

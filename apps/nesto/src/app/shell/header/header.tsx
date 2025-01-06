@@ -25,8 +25,8 @@ export function ShellHeader() {
             </div>
           </div>
           <div className="flex flex-col items-center gap-8 md:flex-row">
-            <Link to="/login">
-              <ShellHeaderLinkText label="Login" />
+            <Link to="/applications">
+              <ShellHeaderLinkText label="Applications" />
             </Link>
             <Link to="/applications/create">
               <Button>Sign Up</Button>

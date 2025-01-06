@@ -22,6 +22,12 @@ To run storybook
 npm run storybook
 ```
 
+To run unit tests
+
+```sh
+npm run tests
+```
+
 # nesto Front-End Coding Challenge
 
 It's mortgage season! Your challenge is to build a microsite that empowers clients to get the lowest rate on first try!
