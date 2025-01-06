@@ -34,6 +34,10 @@ export const useApplications = () => {
     queryKey: ['applications'],
     queryFn: () =>
       request<Application[]>({ url: '/applications', method: 'GET' }),
+    select: (data) =>
+      data.filter((application) =>
+        application.applicants.some((applicant) => applicant.email.length)
+      ),
   });
 };
 

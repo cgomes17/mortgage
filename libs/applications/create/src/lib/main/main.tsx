@@ -21,8 +21,8 @@ export function Main() {
   const { mutate } = useCreateApplication((data) => {
     toast.success('Application created');
     navigate({
-      to: '/applications/$applicationId',
-      params: { $applicationId: data.id },
+      from: '/applications/create',
+      to: `/applications/${data.id}`,
     });
   });
 
