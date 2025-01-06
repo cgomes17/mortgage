@@ -18,7 +18,7 @@ const input = tv({
 export const TextInput = forwardRef<
   HTMLInputElement,
   {
-    helperText: JSX.Element;
+    helperText?: JSX.Element;
     colour?: 'info' | 'error';
   } & React.InputHTMLAttributes<HTMLInputElement>
 >(({ helperText, colour, ...props }, ref) => (

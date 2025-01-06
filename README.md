@@ -10,9 +10,10 @@
 
 ## Run tasks
 
-To run the dev server, use:
+To run first install packages and start dev server
 
 ```sh
+npm install
 npm start
 ```
 
