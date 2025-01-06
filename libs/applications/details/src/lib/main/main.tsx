@@ -31,7 +31,7 @@ export function Main() {
   return (
     <div className="flex flex-col gap-8 md:flex-row">
       <div className="flex flex-col flex-1">
-        {applicationDetails && (
+        {applicationDetails?.product && (
           <Card>
             <div className="flex flex-col items-center gap-8 text-center">
               <div className="px-5 py-2 -mt-6 font-bold rounded-b-xl bg-secondary text-secondary-contrast">
